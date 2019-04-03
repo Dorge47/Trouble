@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble</title>
+</head>
+
+<body>
+    <div id="setup1">
+        <form id="form0">
+            <label for="players">How many people are playing?</label><br>
+            <input type="radio" name="players" value="2" onchange="submit1(parseInt(this.form.players.value))">2<br>
+            <input type="radio" name="players" value="3" onchange="submit1(parseInt(this.form.players.value))">3<br>
+            <input type="radio" name="players" value="4" onchange="submit1(parseInt(this.form.players.value))">4<br>
+        </form>
+    </div>
+    <div id="setup2">
+        <form id="form1" class="hidden">
+            <p>What color is Player 1?</p>
+            <input type="radio" name="player1" value="blue">Blue<br>
+            <input type="radio" name="player1" value="green">Green<br>
+            <input type="radio" name="player1" value="red">Red<br>
+            <input type="radio" name="player1" value="yellow">Yellow<br>
+        </form>
+        <form id="form2" class="hidden">
+            <p>What color is Player 2?</p>
+            <input type="radio" name="player2" value="blue">Blue<br>
+            <input type="radio" name="player2" value="green">Green<br>
+            <input type="radio" name="player2" value="red">Red<br>
+            <input type="radio" name="player2" value="yellow">Yellow<br>
+        </form>
+        <form id="form3" class="hidden">
+            <p>What color is Player 3?</p>
+            <input type="radio" name="player3" value="blue">Blue<br>
+            <input type="radio" name="player3" value="green">Green<br>
+            <input type="radio" name="player3" value="red">Red<br>
+            <input type="radio" name="player3" value="yellow">Yellow<br>
+        </form>
+        <form id="form4" class="hidden">
+            <p>What color is Player 4?</p>
+            <input type="radio" name="player4" value="blue">Blue<br>
+            <input type="radio" name="player4" value="green">Green<br>
+            <input type="radio" name="player4" value="red">Red<br>
+            <input type="radio" name="player4" value="yellow">Yellow<br>
+        </form>
+        <button type="button" name="button" id="colorsubmit" onclick="submitColors()">Submit Colors</button>
+    </div>
+    <div id="boardcontainer">
+        <div id="map">
+            <img src="img/trouble.png" alt="Trouble game board" id="board" ondragstart="return false">
+            <!--Pieces will be mapped onto the game board using JS after everything is rendered-->
+            <img src="img/red.png" id="red1" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/red.png" id="red2" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/red.png" id="red3" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/red.png" id="red4" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/green.png" id="green1" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/green.png" id="green2" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/green.png" id="green3" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/green.png" id="green4" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/blue.png" id="blue1" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/blue.png" id="blue2" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/blue.png" id="blue3" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/blue.png" id="blue4" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/yellow.png" id="yellow1" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/yellow.png" id="yellow2" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/yellow.png" id="yellow3" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/yellow.png" id="yellow4" class="gamepiece" onclick="movePiece(this)" ondragstart="return false">
+            <img src="img/dieblank.png" id="die0" class="die" onclick="rollDice()" ondragstart="return false">
+        </div>
+        <div id="info">
+            <p>Current turn:</p>
+            <p id="playernumber"></p>
+            <button id="savegame" onclick="saveGameState()">Save Game</button>
+            <button id="loadgame" onclick="loadGameState('optionalstate')">Load Game</button>
+            <p id="storesave"></p>
+        </div>
+    </div>
+</body>
+<script type="application/javascript" src="application.js"></script>
+<script>debugSubmitColors()</script>
+<!--Script located after the body so elements are properly rendered before running the script-->
+
+</html>

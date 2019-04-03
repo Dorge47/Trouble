@@ -1,0 +1,88 @@
+#boardcontainer {
+    display: none;
+    justify-content: center;
+    align-content: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+#colorsubmit {
+    display: none;
+}
+
+.die {
+    cursor: pointer;
+    display: none;
+}
+
+.gamepiece {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#info {
+    position: absolute;
+    left: 2%;
+    max-width: 10%;
+}
+
+#info p {
+    word-wrap: break-word;
+}
+
+.notclickable {
+    cursor: default;
+}
+
+#homebutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 18px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    top: 200px;
+    box-shadow: 0 1px 2px #999;
+    transition: box-shadow 0.25s;
+    text-decoration: none;
+}
+
+#homebutton:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 20px #999;
+}
+
+a {
+    text-decoration: none;
+}
+
+#troublelogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 200px;
+    transition: transform .2s;
+}
+
+#troublelogo:hover {
+    transform: scale(1.5);
+}
+
+#scfooter {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
